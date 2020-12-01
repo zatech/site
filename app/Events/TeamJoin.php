@@ -9,9 +9,9 @@ class TeamJoin
 {
     use Dispatchable, SerializesModels;
 
-    public $payload;
+    public object $payload;
 
-    public function __construct($payload)
+    public function __construct(object $payload)
     {
         $this->payload = $payload;
     }

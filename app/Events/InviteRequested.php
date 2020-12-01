@@ -8,7 +8,7 @@ class InviteRequested
 {
     use Dispatchable;
 
-    public $email;
+    public string $email;
 
     public function __construct(string $email)
     {

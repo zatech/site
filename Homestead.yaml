@@ -15,7 +15,11 @@ databases:
     - homestead
 features:
     -
+        mysql: false
+    -
         mariadb: false
+    -
+        postgresql: false
     -
         ohmyzsh: false
     -

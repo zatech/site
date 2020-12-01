@@ -35,16 +35,17 @@
                 </div>
             @else
                 {{ Form::errors() }}
-                {{ Form::open([ 'route' => 'invite:post', ]) }}
-                    @captcha
-
+                {{ Form::open([ 'route' => 'invite:post', 'id' => 'jsFormSubmit', ]) }}
                     {{ Form::bsEmail('email', null, [ 'placeholder' => 'Email', 'autofocus' => true, 'required' => true, ]) }}
 
                     <div class="form-group">
                         {{ Form::bsCheckbox('code-of-conduct', 'value', false, [ 'labelValue' => 'Did you read the Code of Conduct?', ]) }}
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Request Invite</button>
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::displaySubmit('jsFormSubmit', 'Request Invite', [
+                        'class' => 'btn btn-primary btn-block',
+                    ]) !!}
                 {{ Form::close() }}
             @endif
         </div>

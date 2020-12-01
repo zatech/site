@@ -9,7 +9,7 @@ class Message
 {
     use Dispatchable, SerializesModels;
 
-    public $payload;
+    public object $payload;
 
     public function __construct(object $payload)
     {

@@ -12,7 +12,7 @@ class InvitePostController extends Controller
         $this->validate($request, [
             'email' => 'required|email',
             'code-of-conduct' => 'required',
-            'g-recaptcha-response' => 'required|captcha'
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         event(new InviteRequested($request->input('email')));

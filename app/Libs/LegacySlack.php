@@ -32,6 +32,7 @@ class LegacySlack
         ]);
     }
 
+    // @TODO: This can just be a static method.
     public function invite(string $email): object
     {
         $response = $this->client->request('POST', 'users.admin.invite', [
