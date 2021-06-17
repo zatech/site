@@ -35,9 +35,7 @@
                 </div>
             @else
                 {{ Form::errors() }}
-                {{ Form::open([ 'route' => 'invite:post', ]) }}
-                    @captcha
-
+                {{ Form::open([ 'route' => 'invite:post', 'id' => 'jsFormSubmit', ]) }}
                     {{ Form::bsEmail('email', null, [ 'placeholder' => 'Email', 'autofocus' => true, 'required' => true, ]) }}
 
                     <div class="my-2">
@@ -45,7 +43,10 @@
                     </div>
 
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-primary">Request Invite</button>
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::displaySubmit('jsFormSubmit', 'Request Invite', [
+                            'class' => 'btn btn-primary',
+                        ]) !!}
                     </div>
                 {{ Form::close() }}
             @endif

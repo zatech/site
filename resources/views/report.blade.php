@@ -27,14 +27,15 @@
 
             {{ Form::errors() }}
             {{ Form::open([ 'route' => 'report:post', ]) }}
-                @captcha
-
                 <div class="mb-4">
                     {{ Form::bsTextarea('report', null, [ 'rows' => 8, 'autofocus' => true, 'required' => true, ]) }}
                 </div>
 
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::displaySubmit('jsFormSubmit', 'Submit', [
+                        'class' => 'btn btn-primary',
+                    ]) !!}
                 </div>
             {{ Form::close() }}
         </div>
