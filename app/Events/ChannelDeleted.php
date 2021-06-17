@@ -2,14 +2,13 @@
 
 namespace App\Events;
 
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 
 class ChannelDeleted
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
 
-    public $payload;
+    public object $payload;
 
     public function __construct(object $payload)
     {

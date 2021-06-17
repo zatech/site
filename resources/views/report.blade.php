@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-12 col-lg-8 col-xl-6">
-            <div class="jumbotron">
+            <div class="bg-light m-4 p-4">
                 <p class="lead">
                     If you feel as though someone is in breach of the <a href="https://github.com/zatech/code-of-conduct">code of conduct</a>, is making you feel unsafe or would like to make a report the admin team anonymously please do so in the text field below.
                 </p>
@@ -29,9 +29,13 @@
             {{ Form::open([ 'route' => 'report:post', ]) }}
                 @captcha
 
-                {{ Form::bsTextarea('report', null, [ 'rows' => 8, 'autofocus' => true, 'required' => true, ]) }}
+                <div class="mb-4">
+                    {{ Form::bsTextarea('report', null, [ 'rows' => 8, 'autofocus' => true, 'required' => true, ]) }}
+                </div>
 
-                <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                </div>
             {{ Form::close() }}
         </div>
     </div>

@@ -10,7 +10,6 @@ class SendInvite implements ShouldQueue
 {
     public function handle(InviteRequested $event)
     {
-        $slack = new LegacySlack();
-        $slack->invite($event->email);
+        LegacySlack::invite($event->email);
     }
 }
