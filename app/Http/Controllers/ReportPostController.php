@@ -11,7 +11,7 @@ class ReportPostController extends Controller
     {
         $this->validate($request, [
             'report' => 'required',
-            'g-recaptcha-response' => 'required|captcha'
+            'g-recaptcha-response' => 'required|captcha',
         ]);
 
         event(new AnonReport($request->input('report')));
