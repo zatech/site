@@ -1,8 +1,8 @@
-name: Deploy Master to Production
+name: Deploy Main to Production
 on:
     push:
         branches:
-            - master
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest

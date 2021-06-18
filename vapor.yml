@@ -8,7 +8,7 @@ environments:
         domain: zatech.co.za
         queue-concurrency: 1
         memory: 1024
-        runtime: 'php-8.0:al2'
+        runtime: 'php-7.4:al2'
         scheduler: false
         mail: false
         build:
