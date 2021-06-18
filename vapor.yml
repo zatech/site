@@ -1,0 +1,16 @@
+id: 7066
+name: zatech-site
+separate-vendor: true
+environments:
+    production:
+        cli-memory: 512
+        concurrency: 1
+        domain: zatech.co.za
+        queue-concurrency: 1
+        memory: 1024
+        runtime: 'php-8.0:al2'
+        scheduler: false
+        mail: false
+        build:
+            - 'composer install --no-dev'
+            - 'php artisan event:cache'
