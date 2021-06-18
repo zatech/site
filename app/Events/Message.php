@@ -8,7 +8,7 @@ class Message
 {
     use Dispatchable;
 
-    public string $payload;
+    public object $payload;
 
     public function __construct(object $payload)
     {
