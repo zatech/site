@@ -3,7 +3,7 @@
 @section('content')
     <div class="row justify-content-center">
         <div class="col-12 col-lg-8 col-xl-6">
-            <div class="jumbotron">
+            <div class="bg-light m-4 p-4">
                 <h2>Welcome!</h2>
                 <p class="lead">
                     {{ config('app.name') }} is a community for those working in and around the South African tech community to gather, share and learn from each other.
@@ -35,16 +35,19 @@
                 </div>
             @else
                 {{ Form::errors() }}
-                {{ Form::open([ 'route' => 'invite:post', ]) }}
-                    @captcha
-
+                {{ Form::open([ 'route' => 'invite:post', 'id' => 'jsFormSubmit', ]) }}
                     {{ Form::bsEmail('email', null, [ 'placeholder' => 'Email', 'autofocus' => true, 'required' => true, ]) }}
 
-                    <div class="form-group">
+                    <div class="my-2">
                         {{ Form::bsCheckbox('code-of-conduct', 'value', false, [ 'labelValue' => 'Did you read the Code of Conduct?', ]) }}
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Request Invite</button>
+                    <div class="d-grid">
+                        {!! NoCaptcha::renderJs() !!}
+                        {!! NoCaptcha::displaySubmit('jsFormSubmit', 'Request Invite', [
+                            'class' => 'btn btn-primary',
+                        ]) !!}
+                    </div>
                 {{ Form::close() }}
             @endif
         </div>

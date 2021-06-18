@@ -19,7 +19,7 @@
    </head>
     <body>
         <div id="app">
-            <nav class="navbar navbar-expand navbar-light bg-light mb-5">
+            <nav class="navbar navbar-expand bg-light mb-4">
                 <ul class="navbar-nav ml-auto">
                     @auth
                         <li class="nav-item">

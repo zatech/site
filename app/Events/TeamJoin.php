@@ -2,16 +2,15 @@
 
 namespace App\Events;
 
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 
 class TeamJoin
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
 
-    public $payload;
+    public object $payload;
 
-    public function __construct($payload)
+    public function __construct(object $payload)
     {
         $this->payload = $payload;
     }

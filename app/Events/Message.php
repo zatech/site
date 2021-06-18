@@ -2,14 +2,13 @@
 
 namespace App\Events;
 
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 
 class Message
 {
-    use Dispatchable, SerializesModels;
+    use Dispatchable;
 
-    public $payload;
+    public string $payload;
 
     public function __construct(object $payload)
     {

@@ -1,7 +1,8 @@
-/.vagrant
 /node_modules
 /public/hot
 /public/storage
+/public/mix-manifest.json
+/public/css/app.css
 /storage/*.key
 /vendor
 .env
@@ -10,5 +11,4 @@
 npm-debug.log
 yarn-error.log
 .vapor/
-.env.production
-.env.staging
+/.vscode

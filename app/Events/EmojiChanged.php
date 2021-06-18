@@ -8,7 +8,7 @@ class EmojiChanged
 {
     use Dispatchable;
 
-    public $payload;
+    public object $payload;
 
     public function __construct(object $payload)
     {

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', [ 'as' => 'welcome', 'uses' => WelcomeController::class, ]);
 Route::post('invite', [ 'as' => 'invite:post', 'uses' => InvitePostController::class, ]);
 

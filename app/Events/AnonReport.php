@@ -8,7 +8,7 @@ class AnonReport
 {
     use Dispatchable;
 
-    public $report;
+    public string $report;
 
     public function __construct(string $report)
     {
