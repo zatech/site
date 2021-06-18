@@ -1,6 +1,5 @@
 id: 7066
 name: zatech-site
-separate-vendor: true
 environments:
     production:
         cli-memory: 512
