@@ -26,7 +26,7 @@
             <hr>
 
             {{ Form::errors() }}
-            {{ Form::open([ 'route' => 'report:post', ]) }}
+            {{ Form::open([ 'route' => 'report:post', 'id' => 'jsFormSubmit', ]) }}
                 <div class="mb-4">
                     {{ Form::bsTextarea('report', null, [ 'rows' => 8, 'autofocus' => true, 'required' => true, ]) }}
                 </div>
