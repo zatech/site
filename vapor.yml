@@ -12,5 +12,6 @@ environments:
         scheduler: false
         mail: false
         build:
-            - 'composer install --no-dev'
+            - 'COMPOSER_MIRROR_PATH_REPOS=1 composer install --no-dev'
             - 'php artisan event:cache'
+            - 'npm ci && npm run prod && rm -rf node_modules'
