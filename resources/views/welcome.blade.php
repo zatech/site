@@ -52,4 +52,12 @@
             @endif
         </div>
     </div>
+
+    <div class="row justify-content-center mt-5">
+        <div class="col-12 col-lg-9">
+            <p class="text-justify">
+                <small>Please be aware that posting content on ZATech could be recognised as publishing information in the public sphere. If you publish another person's private information without their consent, you could be in contravention of the Protection of Personal Information Act. Admins who become aware of flagrant breaches might be compelled to report incidents to the Information Regulator. If you believe that your privacy rights are being infringed on ZATech, please <a href="https://github.com/zatech/code-of-conduct#reporting" target="_blank">reach out</a> to someone on the Admin team directly. Please be advised however that the use of Slack and your membership and contributions on the ZATech workspace offers no warranty or guarantee to your privacy, and that publishing your private information on ZATech is done at your own risk.</small>
+            </p>
+        </div>
+    </div>
 @endsection
